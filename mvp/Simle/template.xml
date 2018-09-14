@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<template name="Simple Template" description="Creates a new mvp template" format="5" minApi="9"
+    minBuildApi="14" revision="5">
+
+    <category value="mvp" />
+    <formfactor value="Mobile" />
+
+    <parameter name="template Name" constraints="class|unique|nonempty" default="Template"
+        help="The name of the template to create" id="templateName" type="string" />
+
+    <parameter name="template Describe" constraints="nonempty" default="mvp模板"
+        help="The describe of the template" id="templateDescribe" type="string" />
+
+    <parameter name="Generate Layout File" default="true"
+        help="If true, a layout file will be generated" id="generateLayout" type="boolean" />
+
+    <parameter name="mvp view is fragment?" default="true"
+        help="If true Fragment, If false Activity" id="isFragment" type="boolean" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>

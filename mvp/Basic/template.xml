@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<template name="Basic Template" description="在basic包内创建mvp相关基类" format="5" minApi="9"
+    minBuildApi="14" revision="5">
+
+    <category value="mvp" />
+    <formfactor value="Mobile" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
