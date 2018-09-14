@@ -25,6 +25,8 @@
 <#else>
     <instantiate from="root/src/app_package/TemplateActivity.java.ftl"
                        to="${TempTo}/${TempViewName}.java" />
+    <merge from="root/AndroidManifest.xml.ftl"
+                                  to="${escapeXmlAttribute(manifestOut)}/AndroidManifest.xml" />
 </#if>
 
   <open file="${TempTo}/${TempViewName}.java" />
