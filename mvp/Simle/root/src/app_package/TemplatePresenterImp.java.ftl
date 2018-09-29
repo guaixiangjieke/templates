@@ -1,5 +1,9 @@
 package ${TempPackageName};
 
+<#if applicationPackage??>
+import ${applicationPackage}.basic.BasicMvpPresenter;
+</#if>
+
 /**
  * ${templateDescribe} mvp presenter实现类
  */

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 <#if applicationPackage??>
 import ${applicationPackage}.R;
+import ${applicationPackage}.basic.BasicMvpFragment;
 </#if>
 
 /**
@@ -33,6 +34,9 @@ public class ${TempViewName} extends BasicMvpFragment<Contract.IPresenter> imple
 
     @Override
     public Contract.IPresenter getPresenter() {
-        return null;
+        final Contract.IModel model = new ${TempModelName}();
+        final Contract.IView view = this;
+        final Contract.IPresenter presenter = new ${TempPresenterName}(model, view);
+        return presenter;
     }
 }
