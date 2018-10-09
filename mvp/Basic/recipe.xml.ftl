@@ -4,6 +4,11 @@
 <#if !(hasDependency('com.android.support:appcompat-v7'))>
     <dependency mavenUrl="com.android.support:appcompat-v7:${buildApi}.+"/>
 </#if>
+
+<#if !(hasDependency('com.nl.mvp:mvp'))>
+    <dependency mavenUrl="com.nl.mvp:mvp:0.0.1"/>
+</#if>
+
 <instantiate from="root/src/app_package/BasicMvpActivity.java.ftl"
                                       to="${TempTo}/BasicMvpActivity.java" />
                    <instantiate from="root/src/app_package/BasicMvpFragment.java.ftl"
